@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title> JS Closures </title>
+<script type='text/Javascript'>
+	var Person = function(pName) {
+		// This property is within private scope is can only be accessed inside the constructor scope.
+		var _name = pName;
+
+		// This Function will allow the private property name to be accessed outside of the constructer scope.
+		this.getName = function() {
+			return _name;
+		};
+	}
+		var mySelf = new Person('Errol');
+		console.log(mySelf.getName())
+	
+</script>
+</head>
+<body>
+<div id='content'> </div>
+</body>
+</html>
